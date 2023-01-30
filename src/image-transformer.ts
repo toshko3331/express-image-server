@@ -10,7 +10,7 @@ export class ImageTransformer {
     try {
       const transformedImage = sharp(image)
 
-      await transformedImage.resize(options.width, options.height, {
+      await transformedImage.rotate().resize(options.width, options.height, {
         fit: 'cover',
       })
 
